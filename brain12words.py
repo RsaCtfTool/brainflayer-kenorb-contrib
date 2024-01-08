@@ -30,14 +30,14 @@ class Usage(Exception):
 
 def generate(prefix=False, number=5, lengthCount=12, isSpace=True):
     while number > 0:
-        laststring = list()
+        laststring = []
         if prefix == 'TRUE':
             print("Not Supported.")
             # word1 = PREFIXES[int(random.uniform(0,len(PREFIXES)))]
         elif prefix:
             laststring = prefix
         else:
-            for x in range(lengthCount):
+            for _ in range(lengthCount):
                 laststring.append(
                     CODEWORDS[int(random.uniform(0, len(CODEWORDS)))].rstrip())
 
